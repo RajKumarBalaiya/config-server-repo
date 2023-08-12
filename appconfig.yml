@@ -1,0 +1,15 @@
+#mysql database connection
+spring:
+  config:
+     activate:
+       on-profile: dev 
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver  
+    url: jdbc:mysql://localhost:3306/test?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: admin
+#below properties will automatically creates and updates database schema    
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
